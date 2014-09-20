@@ -19,17 +19,17 @@ Donnie Dark is dark, responsive, customizable theme for [Ghost](http://ghost.org
 
 See the [Ghost documentation on installing themes](http://docs.ghost.org/themes/).
 
-## Customizations
+## Customizing
 
 This theme includes a javascript configuration file that can be edited to elegantly utilize Google Analytics and Disqus. It is also possible to easily edit header of the page, changing links and social icons to your liking.
 
 ### Enabling Google Analytics or Disqus
 
 * Open file ```donnie-dark/assets/js/config.js```.
-* To add Google Analytics to your site, just add your google analytics key in the ```donnie_dark_config_google_analytics_key = ''```.
+* To add Google Analytics to your site, just add your google analytics key to  ```donnie_dark_config_google_analytics_key = ''```.
 * To add Disqus to your site, just add your disqus shortname to ```donnie_dark_config_disqus_shortname = ''```.
 
-### Editing page header to your liking
+### Editing page header
 
 Page header is contained in ```default.hbs```. By default the page header contains left and right sections. On the left you have blog name and links to static pages. On the right you have social icons and blog cover image. You can find all social icons from the [font-awesome webpage](http://fortawesome.github.io/Font-Awesome/icons/#brand).
 
