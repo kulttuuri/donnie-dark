@@ -17,7 +17,7 @@ Donnie Dark is dark, responsive, customizable theme for [Ghost](http://ghost.org
 
 ## Installation
 
-See the [Ghost documentation on installing themes](http://docs.ghost.org/themes/).
+See [this documentation](https://www.digitalocean.com/community/tutorials/how-to-change-themes-and-adjust-settings-in-ghost) on installing themes for Ghost blog.
 
 ## Customizing
 
