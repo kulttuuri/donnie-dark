@@ -1,0 +1,41 @@
+{{!< default}}
+
+<div class="pure-g-r">
+	<div class="pure-u-4-4">
+		<main role="main">
+
+			<article class="donnie-dark-panel donnie-dark-list-all-tags-panel">
+				<h3 class="donnie-dark-list-all-tags-header wow fadeIn">Listing all posts with tag&nbsp;&nbsp;<i class="fa fa-tag"></i> <span class="donnie-dark-current-tag-header-name">{{tag.name}}</span></h3>
+			</article>
+
+			{{#foreach posts}}
+				<a class="donnie-dark-post {{post_class}}" href='{{url}}'>
+					<article class="donnie-dark-panel">
+
+						<header>
+							<h2 class="donnie-dark-title donnie-dark-post-title">{{{title}}}</h2>
+							<div class="donnie-dark-post-meta">
+								<i class="fa fa-clock-o donnie-dark-post-time"></i><time datetime="{{date published_at timeago='true'}}">{{date published_at timeago="true"}}</time>
+								{{#if tags}}
+									<i class="fa fa-tags donnie-dark-post-tags"></i> {{tags autolink="false"}}
+								{{/if}}
+							</div>
+						</header>
+
+						<section>
+							<p class="donnie-dark-post-excerpt">{{excerpt}}&hellip;</p>
+							<div class="donnie-dark-read-more"><span>READ MORE <i class="fa fa-caret-right"></i></span></div>
+						</section>
+						
+					</article>
+				</a>
+			{{/foreach}}
+
+			<div class="donnie-dark-panel panel-pagination">
+				{{pagination}}
+			</div>
+
+		</main>
+	</div>
+
+</div>

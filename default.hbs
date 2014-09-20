@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+
+		<title>{{meta_title}}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<meta name="description" content="{{meta_description}}" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link href='http://fonts.googleapis.com/css?family=Copse|Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{{asset "css/bootstrap/bootstrap.min.css"}}">
+		<link rel="stylesheet" href="{{asset "css/bootstrap/bootstrap-theme.min.css"}}">
+		<link rel="stylesheet" href="{{asset "css/pure.min.css"}}">
+		<link rel="stylesheet" href="{{asset "css/animate.css"}}">
+		<link rel="stylesheet" href="{{asset "css/screen.css"}}">
+		<link rel="stylesheet" href="{{asset "css/custom.css"}}">
+
+		{{ghost_head}}
+
+	</head>
+
+	<body>
+
+		<script src="{{asset "js/config.js"}}"></script>
+		<div id="donnie-dark-top-area">
+			<header>
+				<div id="donnie-dark-header-content">
+					<div class="pure-g">
+
+						<div class="pure-u-14-24">
+							<ul class="top-navigation-list list-left">
+								<li><a href="{{@blog.url}}">{{@blog.title}}</a></li>
+								<li><a href="{{@blog.url}}/about" id="nav-item-about"><i class="fa fa-user"></i><span class="donnie-dark-header-link-text">Me</span></a></li>
+								<li><a href="{{@blog.url}}/projects" id="nav-item-projects"><i class="fa fa-suitcase"></i><span class="donnie-dark-header-link-text">Projects</span></a></li>
+						</div>
+
+						<div class="pure-u-8-24 donnie-dark-header-nav-social-icons">
+							<ul class="top-navigation-list list-right">
+								<li class="tooltipster" title="Receive my blog through RSS!"><a href="{{@blog.url}}/rss/"><i class="fa fa-rss-square"></i></a></li>
+								<li class="tooltipster" title="I'm on GitHub!"><a href="https://github.com/kulttuuri"><i class="fa fa-github"></i></a></li>
+								<li class="tooltipster" title="I'm also on Bitbucket!"><a href="https://bitbucket.org/kulttuuri"><i class="fa fa-bitbucket"></i></a></li>
+								<li class="tooltipster" title="Check me out on Twitter, too!"><a href="https://twitter.com/Kulttuuri"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+
+						<div class="pure-u-2-24" id="top-user-image">
+							<img class="donnie-dark-top-author-logo" src="{{@blog.logo}}">
+						</div>
+
+					</div>
+				</div>
+			</header>
+		</div>
+
+		<div id="donnie-dark-center-area">
+            
+			<div class="donnie-dark-page-content">
+				{{{body}}}
+			</div>
+
+		</div>
+
+		{{ghost_foot}}
+		
+		<script src="{{asset "js/bootstrap/bootstrap.min.js"}}"></script>
+		<script src="{{asset "js/regular/jquery.tooltipster.min.js"}}"></script>
+		<script src="{{asset "js/regular/highlight.min.js"}}"></script><script>hljs.initHighlightingOnLoad();</script>
+		<script src="{{asset "js/regular/wow.min.js"}}"></script><script>new WOW().init();</script>
+		<script src="{{asset "js/additional/google_analytics.js"}}"></script>
+		
+		<script>var donnie_dark_blog_description = "{{@blog.description}}";</script>
+		<script src="{{asset "js/main.js"}}"></script>
+
+		<!-- Load some of page css files on bottom for speed optimization -->
+		<link rel="stylesheet" href="{{asset "fonts/font-awesome/css/font-awesome.min.css"}}">
+		<link rel="stylesheet" href="{{asset "css/highlight.js.obsidian.min.css"}}">
+		<link rel="stylesheet" href="{{asset "css/tooltipster.min.css"}}">
+
+	</body>
+
+</html>

@@ -1,0 +1,66 @@
+{{!< default}}
+
+{{#post}}
+
+	<div class="pure-g-r">
+		<main role="main" class="pure-u-1">
+			<article class="donnie-dark-panel donnie-dark-post {{post_class}}">
+
+				<h1 class="donnie-dark-post-title wow fadeInDown">{{{title}}}</h1>
+
+				<header class="donnie-dark-post-meta wow fadeIn" data-wow-duration="2s">
+					<span id="donnie-dark-published-time"><i class="fa fa-clock-o donnie-dark-post-time"></i><time datetime="{{date published_at timeago='true'}}">{{date published_at timeago="true"}}</time></span>
+					<script type="text/javascript">if (!donnie_dark_static_page_publish_dates) document.getElementById("donnie-dark-published-time").style.display = "none";</script>
+					{{#if tags}}
+						<i class="fa fa-tags donnie-dark-post-tags"></i> {{tags}}
+					{{/if}}
+				</header>
+
+				<section class="post-content">
+				    {{content}}
+				</section>
+
+			</article>
+		</main>
+
+		<footer class="pure-u-4-4 footer-author">
+			<div class="donnie-dark-panel donnie-dark-panel-author">
+				<div class="pure-g">
+
+					<div class="pure-u-4-24">
+						{{#if author.image}}
+							<img class="donnie-dark-author-image" src="{{author.image}}" />
+						{{/if}}
+					</div>
+					
+					<div class="pure-u-1-24"></div>
+
+					<div class="pure-u-19-24 author-information">
+						<div class="donnie-dark-author-blurb">
+							<h2 class="donnie-dark-author-name">{{author.name}}</h2>
+							<p class="donnie-dark-author-own-info">
+								{{#if author.location}}
+									<a href="https://maps.google.com/?q={{author.location}}" target="_blank"><i class="fa fa-home"></i>&nbsp;{{author.location}}</a>
+								{{/if}}
+								{{#if author.website}}
+									{{#if author.location}}
+										&nbsp;
+									{{/if}}
+									<a href="{{author.website}}"><i class="fa fa-language"></i>&nbsp;{{author.website}}</a>
+								{{/if}}
+							</p>
+							<p class="donnie-dark-author-bio">
+								<i class="fa fa-quote-right donnie-dark-author-bio-quote"></i>&nbsp;{{author.bio}}&nbsp;<i class="fa fa-quote-right donnie-dark-author-bio-quote"></i>
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div id="disqus_thread"></div>
+	<script src="{{asset "js/additional/disqus.js"}}"></script>
+
+{{/post}}

@@ -1,0 +1,626 @@
+/* ======================================= */
+/* =          Table of Contents          = */
+/* ======================================= */
+
+/*
+	1. Global
+	2. Header
+	3. Content
+	4. Post Listing
+	5. Post
+	6. Tag Listing
+	7. Pagination
+	8. Footer
+	9. Error Page
+    10. Other
+*/
+
+
+/* ================= */
+/* =   1. Global   = */
+/* ================= */
+
+    body {
+        background-color: black;
+        background: url("../images/header_bg.jpg");
+        background-attachment: fixed;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 400;
+        color: #000;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    a:link, a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    p, li {
+        color: #757575;
+        font-size: 17px;
+        line-height: 1.45;
+    }
+
+    /* Highlighted text */
+    ::selection {
+        background-color: #5579D3;
+        color: white;
+    }
+    ::-moz-selection {
+        background-color: #5579D3;
+        color: white;
+    }
+
+
+/* ================= */
+/* =   2. Header   = */
+/* ================= */
+
+    #donnie-dark-top-area {
+        z-index: 10;
+        background: url("../images/header_bg.jpg");
+        transition: 1s all ease;
+        position: fixed;
+        display: block;
+        top: 0px;
+        width: 100%;
+        height: 106px;
+        transform: translateZ(0);
+    }
+
+    /* No fixed navbar on small resolutions */
+    @media screen and (max-width: 700px) {
+        #donnie-dark-top-area {
+            position: absolute;
+        }
+    }
+
+    ul.top-navigation-list {
+        padding-top: 14px;
+        padding-left: 0px;
+    }
+
+    ul.top-navigation-list .nav-item-selected {
+        color: green;
+    }
+
+    ul.top-navigation-list a {
+        color: #A7A7A7;
+    }
+
+    ul.top-navigation-list > li {
+        display: inline;
+        font-size: 21px;
+    }
+
+    .top-navigation-list.list-left > li {
+        margin-right: 30px;
+    }
+
+    @media screen and (min-width: 600px) {
+        .top-navigation-list.list-left > li i {
+            margin-right: 9px;
+        }
+    }
+
+    .top-navigation-list.list-right > li {
+        margin-left: 16px;
+    }
+
+    .donnie-dark-page-navigator {
+        padding: 0px;
+        background: white;
+        box-shadow: 1px 1px 1px rgba(174,174,174,0.5);
+    }
+
+    .donnie-dark-page-navigator > .pure-g-r {
+        font-size: 17px;
+    }
+
+    .donnie-dark-page-navigator ul {
+        list-style-type: none;
+    }
+
+    .donnie-dark-page-navigator ul > li {
+        display: inline;
+        margin-right: 50px;
+    }
+
+    .donnie-dark-header-nav-social-icons {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    #top-user-image {
+        opacity: 0.8;
+        -webkit-transition: 1s all ease;
+        -o-transition: 1s all ease;
+        transition: 1s all ease;
+        text-align: right;
+    }
+
+    #top-user-image > img {
+        width: 78px;
+        border: 3px solid #414141;
+        -webkit-transition: 1s all ease;
+        -o-transition: 1s all ease;
+        transition: 1s all ease;
+    }
+
+    #donnie-dark-header-content {
+        transition: 1s all ease;
+        margin: 0 auto;
+        max-width: 980px;
+        min-width: 410px;
+        padding: 20px;
+        padding-top: 13px;
+    }
+    
+    @media screen and (max-width: 780px) {
+        /* Hide nav description texts on small resolutions */
+        .donnie-dark-header-link-text {
+            display: none;
+        }
+
+        /* Make spacing between navbar items smaller on small resolutions */
+        .top-navigation-list.list-left > li {
+            margin-right: 8px;
+        }
+
+        /* Make spacing between social icons smaller on small resolutions */
+        .top-navigation-list.list-right > li {
+            margin-left: 12px;
+        }
+
+        #donnie-dark-top-area {
+            padding-right: 30px;
+        }
+    }
+
+    #donnie-dark-header-content a {
+        text-decoration: none;
+        transition: 1s all ease;
+    }
+
+    #donnie-dark-header-content a:hover {
+        color: green;
+    }
+
+    #top-user-image:hover {
+        opacity: 1.0;
+    }
+
+    .topImgScrolled {
+        top: 3px !important;
+    }
+
+    .topImgScrolled > img {
+        width: 45px !important;
+        filter: initial !important;
+        -webkit-filter: initial !important;
+    }
+
+    .navScrolled {
+        max-height: 50px;
+        height: 50px;
+        -webkit-transition: 1s all ease;
+        -o-transition: 1s all ease;
+        transition: 1s all ease;
+    }
+
+    .navScrolled #donnie-dark-header-content {
+        padding-top: 0px;
+    }
+
+    .navScrolled .donnie-dark-header-title {
+        margin-top: 0px;
+    }
+
+    .navScrolled ul.top-navigation-list {
+        padding-top: 0px;
+        margin-top: 10px;
+    }
+
+	img.donnie-dark-top-author-logo {
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        -o-border-radius: 100px;
+        border-radius: 100px;
+		-webkit-filter: drop-shadow(2px 5px 2px rgba(0,0,0,0.9));
+		filter: drop-shadow(2px 5px 2px rgba(0,0,0,0.9));
+		-webkit-transform: translateZ(0);
+	}
+    
+    .page-title > h1 {
+        color: white;
+    }
+
+
+/* ================== */
+/* =   3. Content   = */
+/* ================== */
+
+    .donnie-dark-page-content {
+        margin: 0 auto;
+        padding: 0px 0px;
+        max-width: 980px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .donnie-dark-page-content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .donnie-dark-panel {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 1px 1px 1px rgba(17, 17, 17, 0.5);
+        margin-bottom: 20px;
+        border: 2px solid #1B1E22;
+        transition: 1s all ease;
+        transform: translateZ(0);
+    }
+    
+    #donnie-dark-center-area {
+        position: relative;
+        padding-top: 107px;
+    }
+
+
+/* ======================= */
+/* =   4. Post Listing   = */
+/* ======================= */
+
+    .donnie-dark-panel-listing:hover {
+        border: 2px solid #51755E;
+    }
+
+    .donnie-dark-panel-listing:hover {
+        color: black !important;
+    }
+
+    .donnie-dark-panel-listing:hover .donnie-dark-read-more {
+        transition: 1s all ease;
+        color: #5E815E;
+    }
+
+    .donnie-dark-panel-listing:hover .donnie-dark-post-excerpt {
+        color: black;
+    }
+
+
+/* =============== */
+/* =   5. Post   = */
+/* =============== */
+    
+    .donnie-dark-panel .post-content a {
+        text-decoration: underline;
+    }
+
+    .donnie-dark-panel pre {
+        border-radius: 0px;
+    }
+
+    .donnie-dark-post-time {
+        margin-right: 5px;
+    }
+
+    .donnie-dark-post-tags {
+        margin-left: 7px;
+    }
+
+    .donnie-dark-post-meta {
+        margin-top: 5px;
+    }
+
+    .post-content p, li {
+        color: #5A5A5A;
+    }
+
+    .post-content img {
+        max-width: 100%;
+        margin-bottom: 5px;
+        border: 5px solid black;
+    }
+
+    .donnie-dark-post-excerpt {
+        color: #504E4E;
+        font-family: "Open sans", sans-serif;
+        transition: 1s all ease;
+    }
+
+    .donnie-dark-read-more {
+        font-size: 12px;
+        font-variant: small-caps;
+        display: block;
+        text-align: right;
+        margin-top: 15px;
+        font-family: "Open sans", sans-serif;
+    }
+
+    .donnie-dark-post-title {
+        margin: 0px;
+        font-family: "Copse", sans-serif;
+    }
+
+    a.donnie-dark-post:hover, a.donnie-dark-post:hover .donnie-dark-post-title {
+        color: black;
+    }
+
+    .post-content .fa.fa-quote-right.small-quote {
+        font-size: 13px;
+        vertical-align: top;
+    }
+
+
+/* ====================== */
+/* =   6. Tag Listing   = */
+/* ====================== */
+
+    .donnie-dark-list-all-tags-panel {
+        background-color: #242b31;
+        border: 2px solid #47494E;
+    }
+
+    h3.donnie-dark-list-all-tags-header {
+        color: #929292;
+        font-family: "Open sans", sans-serif;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 19px;
+    }
+
+    span.donnie-dark-current-tag-header-name {
+        font-weight: bold;
+    }
+
+
+/* ===================== */
+/* =   7. Pagination   = */
+/* ===================== */
+
+    .panel-pagination {
+        border: 2px solid gray;
+    }
+
+    .donnie-dark-newer-posts {
+        text-align: left;
+        font-size: 11px;
+        padding-top: 5px;
+        font-weight: 300;
+        font-family: "Helvetica Neue";
+    }
+
+    .donnie-dark-older-posts {
+        text-align: right;
+        font-size: 11px;
+        padding-top: 5px;
+        font-weight: 300;
+        font-family: "Helvetica Neue";
+    }
+
+    .donnie-dark-newer-posts a { transition: 0.5s all ease; }
+    .donnie-dark-older-posts a { transition: 0.5s all ease; }
+
+    .donnie-dark-page-number {
+        text-align: center;
+        display: block;
+        padding: 5px;
+        font-size: 14px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+        line-height: 24px;
+        color: #858585;
+    }
+
+    @media screen and (min-width: 480px) {
+        .donnie-dark-newer-posts, .donnie-dark-older-posts {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .donnie-dark-newer-posts, .donnie-dark-older-posts, .donnie-dark-page-number {
+            font-size: 16px;
+        }
+    }
+
+
+/* ================= */
+/* =   8. Footer   = */
+/* ================= */
+
+	.donnie-dark-panel-author {
+		margin-bottom: 0px;
+		border-bottom: 0px;
+	}
+
+    .author-information {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        background-color: #f5f5f5;
+        border: 1px solid #48485A;
+        padding: 10px 10px 0px 15px;
+        position: relative;
+        color: #f8f8f2;
+        background-color: #0A0C16;
+        -webkit-filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+        transform: translateZ(0);
+    }
+
+    .author-information a {
+        color: #BBBBBB;
+        transition: 0.8s all ease;
+    }
+
+    .author-information a:hover {
+        color: #639463;
+    }
+
+    .author-information:after, .author-information:before {
+        right: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .author-information:after {
+        border-color: rgba(245, 245, 245, 0);
+        border-right-color: #0A0C16;
+        border-width: 12px;
+        margin-top: -12px;
+    }
+    .author-information:before {
+        border-color: rgba(227, 227, 227, 0);
+        border-right-color: #48485A;
+        border-width: 13px;
+        margin-top: -13px;
+    }
+
+    .donnie-dark-author-name {
+        margin-top: 6px;
+        color: #BBBBBB;
+        margin-bottom: 4px;
+    }
+
+    .donnie-dark-author-own-info {
+        font-size: 16px;
+        line-height: 1.42857143;
+        margin-top: 0px;
+        margin-bottom: 6px;
+    }
+
+    .donnie-dark-author-bio {
+        margin-top: 11px;
+        font-family: "Open sans", sans-serif;
+        color: #A0A0A0;
+        font-size: 16.7px;
+    }
+
+    .donnie-dark-author-bio-quote {
+        font-size: 13px;
+        vertical-align: top;
+    }
+
+    .donnie-dark-author-image {
+        width: 100%;
+        border-radius: 100%;
+        border: 2px solid #1D1F25;
+        -webkit-filter: drop-shadow(2px 5px 2px rgba(0,0,0,0.9));
+        transform: translateZ(0);        
+    }
+
+/* ==================== */
+/* =   9. Error Page  = */
+/* ==================== */
+
+    .donnie-dark-error-page-panel {
+        border: 3px solid #7A1A1A;
+        border-radius: 4px;
+    }
+
+    .donnie-dark-error-page-warning {
+        font-size: 128px;
+        color: rgb(194, 68, 68);
+        transform: rotateZ(-3deg);
+    }
+
+    .donnie-dark-error-inner-panel {
+        float: left;
+    }
+
+    .donnie-dark-error-inner-panel-right {
+        padding-left: 33px;
+    }
+
+    .donnie-dark-error-stack {
+        margin-top: 40px;
+    }
+
+    .donnie-dark-error-page-title {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .donnie-dark-error-page-description {
+        margin-top: 6px;
+        font-size: 22px;
+    }
+
+    .donnie-dark-error-page-button {
+        font-size: 17px;
+        transition: 0.2s all ease;
+    }
+
+/* ================= */
+/* =   10. Other   = */
+/* ================= */
+
+    /* Make tooltipster tooltips to be underlined */
+    .tooltip {
+        text-decoration: underline;
+    }
+
+    /* Custom theme for tooltipster */
+    .tooltipster-donnie-dark {
+        border-radius: 5px; 
+        border: 2px solid #000;
+        background: #415970;
+        color: #fff;
+    }
+    .tooltipster-donnie-dark .tooltipster-content {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 8px 10px;
+        max-width: 200px;
+        background-color: #415970;
+    }
+
+    .donnie-dark-btn-transparent:hover {
+        text-decoration: none;
+        border-radius: 6px;
+        background-color: #DCEEDC;
+        padding: 6px;
+    }
+
+	/* Disqus comments thread */
+    #disqus_thread {
+		background-color: white;
+		padding: 15px;
+		border: 2px solid black;
+		border-top: 0px;
+		margin-bottom: 20px;
+		box-shadow: 1px 1px 1px rgba(17, 17, 17, 0.5);
+		border-radius: 0px 0px 4px 4px;
+    }

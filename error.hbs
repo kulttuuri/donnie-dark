@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>{{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link href='http://fonts.googleapis.com/css?family=Copse|Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{asset "css/bootstrap/bootstrap.min.css"}}">
+        <link rel="stylesheet" href="{{asset "css/bootstrap/bootstrap-theme.min.css"}}">
+        <link rel="stylesheet" href="{{asset "css/pure.min.css"}}">
+        <link rel="stylesheet" href="{{asset "fonts/font-awesome/css/font-awesome.min.css"}}">
+        <link rel="stylesheet" href="{{asset "css/animate.css"}}">
+        <link rel="stylesheet" href="{{asset "css/screen.css"}}">
+        <link rel="stylesheet" href="{{asset "css/custom.css"}}">
+
+        {{ghost_head}}
+    </head>
+
+    <body>
+
+        <div id="donnie-dark-center-area">
+
+            <div class="donnie-dark-page-content">
+                <div class="donnie-dark-page-content">
+                    <div class="pure-g-r">
+
+                        <div class="pure-u-1-4"></div>
+
+                        <main role="main" class="pure-u-2-4">
+                            <article class="donnie-dark-panel donnie-dark-post donnie-dark-error-page-panel wow bounceIn">
+
+                                <div class="donnie-dark-error-inner-panel">
+                                    <i class="fa fa-warning donnie-dark-error-page-warning"></i>
+                                </div>
+
+                                <div class="donnie-dark-error-inner-panel donnie-dark-error-inner-panel-right">
+                                    <h1 class="donnie-dark-error-page-title">{{code}}</h1>
+                                    <h2 class="donnie-dark-error-page-description">{{message}}</h2>
+                                    <a href="{{@blog.url}}"><button type="button" class="btn btn-success donnie-dark-error-page-button"><i class="fa fa-share-square-o"></i>&nbsp;&nbsp;Back to front page</button></a>
+                                </div>
+
+                                <div style="clear: both;"></div>
+
+                                {{#if stack}}
+                                <section class="donnie-dark-error-stack">
+                                    <h3>Stack Trace</h3>
+                                    <p><strong>{{message}}</strong></p>
+                                    <ul class="error-stack-list">
+                                        {{#each stack}}
+                                        <li>
+                                            at
+                                            {{#if function}}<em class="error-stack-function">{{function}}</em>{{/if}}
+                                            <span class="error-stack-file">({{at}})</span>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </section>
+                                {{/if}}
+
+                            </article>
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="{{asset "js/bootstrap/bootstrap.min.js"}}"></script>
+        <script src="{{asset "js/regular/wow.min.js"}}"></script><script>new WOW().init();</script>
+
+    </body>
+
+</html>
