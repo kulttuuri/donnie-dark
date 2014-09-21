@@ -329,6 +329,18 @@
         border-radius: 0px;
     }
 
+    .donnie-dark-panel code {
+        background-color: rgb(112, 112, 112);
+        font-family: sans-serif;
+        color: white;
+        font-size: 90%;
+    }
+
+    .donnie-dark-panel pre > code {
+        font-size: 100%;
+        background-color: rgb(38, 38, 43);
+    }
+
     .donnie-dark-post-time {
         margin-right: 5px;
     }
