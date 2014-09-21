@@ -29,6 +29,8 @@ This theme includes a javascript configuration file that can be edited to elegan
 * To add Google Analytics to your site, just add your google analytics key to  ```donnie_dark_config_google_analytics_key = ''```.
 * To add Disqus to your site, just add your disqus shortname to ```donnie_dark_config_disqus_shortname = ''```.
 
+To read more about how this configuration file works and / or how you can add similar to your theme, [read my blog post about it](http://kulttuuri.me/elegant-disqus-and-google-analytics-integration-for-ghost-blog/).
+
 ### Editing page header
 
 Page header is contained in ```default.hbs```. By default the page header contains left and right sections. On the left you have blog name and links to static pages. On the right you have social icons and blog cover image. You can find all social icons from the [font-awesome webpage](http://fortawesome.github.io/Font-Awesome/icons/#brand).
