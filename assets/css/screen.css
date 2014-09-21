@@ -33,6 +33,7 @@
 
     h2 {
         font-size: 26px;
+        margin-top: 40px;
     }
 
     h3 {
@@ -337,7 +338,11 @@
     }
 
     .donnie-dark-post-meta {
-        margin-top: 5px;
+        margin-top: 8px;
+    }
+
+    .donnie-dark-post-meta-listing {
+        margin-top: 5px !important;
     }
 
     .post-content p, li {
@@ -368,6 +373,7 @@
     .donnie-dark-post-title {
         margin: 0px;
         font-family: "Copse", sans-serif;
+        line-height: 32px;
     }
 
     a.donnie-dark-post:hover, a.donnie-dark-post:hover .donnie-dark-post-title {
