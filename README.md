@@ -25,9 +25,9 @@ This theme includes a javascript configuration file that can be edited to elegan
 
 ### Enabling Google Analytics or Disqus
 
-* Open file ```donnie-dark/assets/js/config.js```.
-* To add Google Analytics to your site, just add your google analytics key to  ```donnie_dark_config_google_analytics_key = ''```.
-* To add Disqus to your site, just add your disqus shortname to ```donnie_dark_config_disqus_shortname = ''```.
+* Open file ```your_ghost_installation/content/themes/donnie-dark/assets/js/config.js```.
+* To add Google Analytics to your site, add your google analytics key to  ```donnie_dark_config_google_analytics_key = ''```.
+* To add Disqus to your site, add your disqus shortname to ```donnie_dark_config_disqus_shortname = ''```.
 
 To read more about how this configuration file works and / or how you can add similar to your theme, [read my blog post about it](http://kulttuuri.me/elegant-disqus-and-google-analytics-integration-for-ghost-blog/).
 
