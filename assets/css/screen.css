@@ -285,8 +285,6 @@
         box-shadow: 1px 1px 1px rgba(17, 17, 17, 0.5);
         margin-bottom: 20px;
         border: 2px solid #1B1E22;
-        transition: 1s all ease;
-        transform: translateZ(0);
     }
     
     #donnie-dark-center-area {
@@ -305,11 +303,6 @@
 
     .donnie-dark-panel-listing:hover {
         color: black !important;
-    }
-
-    .donnie-dark-panel-listing:hover .donnie-dark-read-more {
-        transition: 1s all ease;
-        color: #5E815E;
     }
 
     .donnie-dark-panel-listing:hover .donnie-dark-post-excerpt {
@@ -370,7 +363,6 @@
     .donnie-dark-post-excerpt {
         color: #504E4E;
         font-family: "Open sans", sans-serif;
-        transition: 1s all ease;
     }
 
     .donnie-dark-read-more {
