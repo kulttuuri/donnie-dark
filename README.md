@@ -1,6 +1,6 @@
 # Donnie Dark
 
-Donnie Dark is dark, responsive, customizable theme for [Ghost](http://ghost.org) 0.5+ blogs. Name of the theme is hats-off for a great movie. **See it live [here](http://kulttuuri.me)!**
+Donnie Dark is dark, responsive, customizable theme for [Ghost](http://ghost.org) 0.5+ blogs. Name of the theme is hats-off for a great movie.
 
 ![Donnie Dark Screenshot](http://i.imgur.com/f1TBcLx.jpg)
 
